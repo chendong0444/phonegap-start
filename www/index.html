@@ -31,14 +31,15 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
-                <h4>UUID: <span id="uuid"> &nbsp;</span>
+                <a href="#" class="btn large" onclick="getuuid();">Get UUID</a>
+                <h4>UUID: <span id="uuid"> &nbsp;</span></h4>
             </div>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-            document.getElementById("uuid").innerHTML = device.uuid;
+            var getuuid=function(){document.getElementById("uuid").innerHTML = device.uuid;};
         </script>
     </body>
 </html>
